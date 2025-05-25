@@ -14,7 +14,7 @@
             color: #333;
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
             background-color: #0078D7;
             padding: 15px;
@@ -46,16 +46,6 @@
             color: #0078D7;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-
         .cta {
             margin-top: 30px;
             padding: 15px;
@@ -72,13 +62,6 @@
         .cta:hover {
             background: #005bb5;
             box-shadow: 0px 0px 10px rgba(0, 120, 215, 0.7);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #E3E4E6;
-            margin-top: 40px;
         }
 
         /* Popup Form Styles */
@@ -136,39 +119,20 @@
     <h1>🚀 NexaBots – AI Automation for Business Success</h1>
     <p>NexaBots provides cutting-edge AI-driven automation solutions tailored for trading, real estate, financial services, and business operations.</p>
 
-    <h2 id="features">🔹 Key Features</h2>
-    <ul>
-        <li>✅ AI-Powered Email Automation – Smart Gmail auto-replies & follow-ups.</li>
-        <li>✅ Real Estate CRM Integration – AI-enhanced client interactions & property analysis.</li>
-        <li>✅ Financial Trading Bots – Automated AI algorithms for optimized trading.</li>
-        <li>✅ Business Data Insights – AI-driven analytics for growth strategies.</li>
-        <li>✅ Multi-Language Support – AI responses in various languages.</li>
-        <li>✅ Secure Cloud-Based Infrastructure – Hosted on Google Cloud for reliability.</li>
-    </ul>
-
-    <h2 id="benefits">✨ Benefits of Using NexaBots</h2>
-    <ul>
-        <li>💡 Increased Productivity – Automate tasks & focus on strategic business goals.</li>
-        <li>💡 Cost Savings – Reduce operational expenses with smart automation.</li>
-        <li>💡 Better Client Engagement – AI-powered responses improve customer satisfaction.</li>
-        <li>💡 Real-Time Data Insights – AI-generated analytics for decision-making.</li>
-        <li>💡 Scalability – Expand automation across multiple business operations.</li>
-    </ul>
-
     <h2 id="contact">📞 Get Started Today</h2>
     <p>Ready to revolutionize your workflow with AI? Explore NexaBots and experience next-level automation for your industry.</p>
     <button class="cta" onclick="openPopup()">Request a Quote</button>
 </div>
 
-<!-- Popup Form -->
+<!-- Popup Form with Email Submission -->
 <div id="popupForm">
     <span class="close-btn" onclick="closePopup()">✖</span>
     <h2>Get a Quote</h2>
-    <form action="mailto:nexabots1@gmail.com" method="post" enctype="text/plain">
+    <form action="https://formsubmit.co/nexabots1@gmail.com" method="POST">
         <input type="text" name="Full Name" placeholder="Full Name" required>
         <input type="email" name="Email" placeholder="Email Address" required>
         <input type="tel" name="Contact Number" placeholder="Contact Number" required>
-        
+
         <select name="Project Type" required>
             <option value="" disabled selected>Select Project Type</option>
             <option value="AI Trading Bots">AI Trading Bots</option>
