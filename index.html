@@ -7,10 +7,11 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #F8F9FA;
+            color: #333;
         }
 
         /* Navigation Bar */
@@ -24,18 +25,21 @@
             text-decoration: none;
             font-size: 18px;
             margin: 0 15px;
+            font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
 
-        /* Page Content */
+        /* Content Container */
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 120, 215, 0.2);
         }
 
         h1, h2 {
@@ -43,28 +47,83 @@
         }
 
         ul {
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cta {
+            margin-top: 30px;
+            padding: 15px;
+            background: #0078D7;
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .cta:hover {
+            background: #005bb5;
+            box-shadow: 0px 0px 10px rgba(0, 120, 215, 0.7);
         }
 
         footer {
             text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            background: #0078D7;
-            color: white;
+            padding: 20px;
+            background: #E3E4E6;
+            margin-top: 40px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
+        /* Popup Form Styles */
+        #popupForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+        #popupForm input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #popupForm button {
+            background: #0078D7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #popupForm button:hover {
+            background: #005bb5;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navigation -->
 <nav>
     <a href="#about">About</a>
     <a href="#features">Features</a>
@@ -75,30 +134,43 @@
 <!-- Main Content -->
 <div class="container">
     <h1>🚀 NexaBots – AI Automation for Business Success</h1>
-    <p>NexaBots provides cutting-edge **AI-driven automation** solutions tailored for **trading, real estate, financial services, and business operations**. Designed for scalability, efficiency, and innovation, NexaBots helps businesses optimize workflows and enhance productivity.</p>
+    <p>NexaBots provides cutting-edge AI-driven automation solutions tailored for trading, real estate, financial services, and business operations.</p>
 
     <h2 id="features">🔹 Key Features</h2>
     <ul>
-        <li>✅ <strong>AI-Powered Email Automation</strong> – Smart Gmail auto-replies & follow-ups.</li>
-        <li>✅ <strong>Real Estate CRM Integration</strong> – AI-enhanced client interactions & property analysis.</li>
-        <li>✅ <strong>Financial Trading Bots</strong> – Automated AI algorithms for optimized trading.</li>
-        <li>✅ <strong>Business Data Insights</strong> – AI-driven analytics for growth strategies.</li>
-        <li>✅ <strong>Multi-Language Support</strong> – AI responses in various languages.</li>
-        <li>✅ <strong>Secure Cloud-Based Infrastructure</strong> – Hosted on Google Cloud for reliability.</li>
+        <li>✅ AI-Powered Email Automation – Smart Gmail auto-replies & follow-ups.</li>
+        <li>✅ Real Estate CRM Integration – AI-enhanced client interactions & property analysis.</li>
+        <li>✅ Financial Trading Bots – Automated AI algorithms for optimized trading.</li>
+        <li>✅ Business Data Insights – AI-driven analytics for growth strategies.</li>
+        <li>✅ Multi-Language Support – AI responses in various languages.</li>
+        <li>✅ Secure Cloud-Based Infrastructure – Hosted on Google Cloud for reliability.</li>
     </ul>
 
     <h2 id="benefits">✨ Benefits of Using NexaBots</h2>
     <ul>
-        <li>💡 **Increased Productivity** – Automate tasks & focus on strategic business goals.</li>
-        <li>💡 **Cost Savings** – Reduce operational expenses with smart automation.</li>
-        <li>💡 **Better Client Engagement** – AI-powered responses improve customer satisfaction.</li>
-        <li>💡 **Real-Time Data Insights** – AI-generated analytics for decision-making.</li>
-        <li>💡 **Scalability** – Expand automation across multiple business operations.</li>
+        <li>💡 Increased Productivity – Automate tasks & focus on strategic business goals.</li>
+        <li>💡 Cost Savings – Reduce operational expenses with smart automation.</li>
+        <li>💡 Better Client Engagement – AI-powered responses improve customer satisfaction.</li>
+        <li>💡 Real-Time Data Insights – AI-generated analytics for decision-making.</li>
+        <li>💡 Scalability – Expand automation across multiple business operations.</li>
     </ul>
 
     <h2 id="contact">📞 Get Started Today</h2>
-    <p>Ready to revolutionize your workflow with AI? Explore NexaBots and experience **next-level automation** for your industry.</p>
-    <p>Visit our <a href="https://github.com/MRH-Technologies/NexaBots" target="_blank">GitHub Repository</a> to learn more.</p>
+    <p>Ready to revolutionize your workflow with AI? Explore NexaBots and experience next-level automation for your industry.</p>
+    <button class="cta" onclick="openPopup()">Request a Quote</button>
+</div>
+
+<!-- Popup Form -->
+<div id="popupForm">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+    <h2>Get a Quote</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Contact Number" required>
+        <input type="text" placeholder="Budget" required>
+        <button type="submit">Submit</button>
+    </form>
 </div>
 
 <!-- Footer -->
@@ -106,6 +178,17 @@
     © 2025 NexaBots | AI Automation for Trading, Real Estate & Business Operations
 </footer>
 
+<script>
+    // Popup form functionality
+    function openPopup() {
+        document.getElementById("popupForm").style.display = "block";
+    }
+    function closePopup() {
+        document.getElementById("popupForm").style.display = "none";
+    }
+</script>
+
 </body>
 </html>
+
 
